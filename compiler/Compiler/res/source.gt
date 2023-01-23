@@ -1,0 +1,18 @@
+@begin
+
+inline foo
+Add
+Sub
+endf
+
+inline LoadAlu
+MovRamReg 11001100
+MovRegReg
+Sub
+MovRegRam 11001100
+endf
+
+:foo
+:LoadAlu
+
+endp

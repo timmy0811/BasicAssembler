@@ -1,0 +1,76 @@
+@begin
+
+MovRamReg 0xff
+Add
+
+# This is a comment
+
+inline a
+JMP 0x0f
+JMP 10011101
+endf
+
+    func b
+    JMP 01011111
+    endf
+
+MovRamReg 11000101
+
+:a
+:b
+
+endp
+
+
+-----------------------------
+Ausgabe steuerbar mit parameter ob hex oder bin
+
+
+1000        # MovRamReg
+1111        # Param1
+1111        # Param2
+
+1000        # MovRamReg
+1100        # Param1
+0101        # Param2
+
+1011        # JMP       # Inline function copies content
+0000        # Param1    #   
+0000        # Param2    #
+
+1111        #End
+1111        #End
+1111        #End
+1111        #End
+1111        #End
+...
+
+
+
+
+
+1000        # MovRamReg
+1111        # Param1
+1111        # Param2
+
+1000        # MovRegReg
+
+1000        # MovRamReg
+0110	    # Param1
+0011	    # Param2
+
+0000	    # Add
+
+1011        # JMPz       # Inline function copies content
+0000        # Param1    #   
+0000        # Param2    #
+
+1000        # MovRegRam
+0110	    # Param1
+0011	    # Param2
+
+1111        #End
+1111        #End
+1111        #End
+1111        #End
+1111        #End

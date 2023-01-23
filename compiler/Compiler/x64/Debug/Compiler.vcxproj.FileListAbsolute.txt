@@ -1,0 +1,2 @@
+D:\Git\Central-Processing-Unit\compiler\Compiler\x64\Debug\Compiler.exe
+C:\Git\Central-Processing-Unit\compiler\Compiler\x64\Debug\Compiler.exe

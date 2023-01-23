@@ -1,0 +1,16 @@
+Add 0000 0
+Sub 0001 0
+Mult 0010 0
+And 0011 0
+Or 0100 0
+Not 0101 0
+Reserved 0110 0
+Reserved 0111 0
+MovRamReg 1000 2
+MovRegRam 1001 2
+MovRegReg 1010 0
+Jmp 1011 2
+Jmpc 1100 2
+Jmpz 1101 2
+Jmpo 1110 2
+End 1111 0
